@@ -96,7 +96,9 @@ class Person {
   void backdrop(){
     //fill left half of screen with something
     //0, 0 --> 12, 11.25
+    fill(grey);
     fill(#A22958);
+    fill(#021F5D);
     rect(0, 0, width, 281.25);
   }
   
@@ -204,9 +206,41 @@ class Person {
     //12 $ per line, 4 lines max --> 48 character message
     //+40 in y for each line at font 4
     fill(shirt);
+    Font.draw(320, 50, 4, _w, _e, _space, _c, _o, _m, _e, _space, _i, _n);
+    Font.draw(320, 90, 4, _p, _e, _a, _c, _e, _exclam);
+    Font.draw(320, 130, 4, _2);
+    Font.draw(320, 170, 4, _3);
     Font.draw(320, 50, 4, _a, _l, _a, _s, _comma, _space, _t, _h, _e);
     Font.draw(320, 90, 4, _c, _a, _k, _e, _space, _i, _s, _space, _a, _space);
     Font.draw(320, 130, 4, _l, _i, _e, _exclam, _space, _w, _h, _a, _t);
     Font.draw(320, 170, 4, _w, _i, _l, _l, _space, _w, _e, _space, _d, _o, _exclam);
+    Font.draw(320, 50, 4, _w, _e, _space, _c, _o, _m, _e, _space, _i, _n);
+    Font.draw(320, 90, 4, _p, _e, _a, _c, _e, _exclam);
+    Font.draw(320, 130, 4, _2);
+    Font.draw(320, 170, 4, _3);
+    char[] e = binary(healthbar.checksum).toCharArray();
+    if(e[e.length-4] == '1' && e[e.length-8] == '0'){
+      Font.draw(320, 50, 4, _c, _a, _n, _space, _y, _o, _u, _space, _h, _e, _l, _p);
+      Font.draw(320, 90, 4, _u, _s, _space, _s, _c, _r, _a, _p);
+      Font.draw(320, 130, 4, _t, _h, _i, _s, _space, _s, _p, _a, _c, _e);
+      Font.draw(320, 170, 4, _s, _t, _a, _t, _i, _o, _n, _space, _exclam);
+    } else {
+      Font.draw(320, 50, 4, _w, _e, _space, _n, _e, _e, _d, _space, _y, _o, _u, _r);
+      Font.draw(320, 90, 4, _g, _i, _t, _dash, _f, _l, _e, _e, _t);
+      Font.draw(320, 130, 4, _t, _e, _c, _h, _n, _o, _l, _o, _g, _y, _comma);
+      Font.draw(320, 170, 4, _m, _e, _r, _g, _e, _space, _i, _t, _space, _i, _n, _exclam);
+    }
+    Font.draw(320, 50, 4, _w, _e, _space, _c, _o, _m, _e, _space, _i, _n);
+    Font.draw(320, 90, 4, _p, _e, _a, _c, _e, _exclam);
+    Font.draw(320, 130, 4, _2);
+    Font.draw(320, 170, 4, _3);
+    Font.draw(320, 50, 4, _h, _o, _m, _e, _space, _t, _o, _space, _t, _h, _e);
+    Font.draw(320, 90, 4, _1, _s, _t, _space, _t, _i, _m, _m, _i, _e, _s);
+    Font.draw(320, 130, 4, _i, _n, _space, _o, _u, _t, _e, _r, _dash);
+    Font.draw(320, 170, 4, _s, _p, _a, _c, _e, _exclam, _space, _colon, _dash, _rParen);
+    Font.draw(320, 50, 4, _m, _i, _c, _r, _o, _m, _i, _x, _space, _i, _s);
+    Font.draw(320, 90, 4, _o, _u, _r, _space, _b, _e, _s, _t, _space, _y, _e, _t);
+    Font.draw(320, 130, 4, _s, _p, _r, _e, _a, _d, _space, _t, _h, _e);
+    Font.draw(320, 170, 4,   _a, _w, _e, _s, _o, _m, _e, _exclam);
   }
 }

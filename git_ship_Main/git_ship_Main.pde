@@ -98,6 +98,7 @@ void init(){
   
   //checksum
   healthbar = new Checksum();
+  healthbar.checksum += pow(2, 2);
   //starfield simulation
   for(int i = 0; i < stars. length; i++){
     stars[i] = new Star();
@@ -115,6 +116,9 @@ void init(){
   earth = new Planet(2*width/3, height/4, 50);
   //dialogue
   person = new Person();
+  char[] q = binary(healthbar.checksum).toCharArray();
+  q[q.length - 7] = '1';
+  healthbar.checksum = unbinary(new String(q));  
   //junk
   junk = new Junk();
   
